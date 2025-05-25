@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,0">
+    <title>Perpustakaan Wijaya Putra
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    <style>
+        /* Additional FAQ-specific styles */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .faq-header h1 {
+            color: darkred;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .faq-header p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: darkred;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: #f0f0f0;
+            color: darkred;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 15px 20px;
+        }
+        
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .faq-category {
+            padding: 8px 16px;
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-category:hover, .faq-category.active {
+            background-color: darkred;
+            color: white;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: darkred;
+            box-shadow: 0 0 5px rgba(139, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 15px;
+                margin: 20px 15px;
+            }
+            
+            .faq-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header"> 
+        <div class="loh">
+            <img src="logo wp.png" alt="" style="width: 50px;height: 50px;">
+            <a href="#" class="logo">Perpustakaan WP
+            </a>
+          </div>
+          <div class="loh1">
+
+          </div>
+
+
+        <nav class="navbar">
+            <a href="index.html" >Beranda</a>
+            <a href="Services.html">Informasi</a>
+            <a href="Experience.html">Berita</a>
+            <a href="Projects.html">Bantuan</a>
+            <a href="Education.html">Pustakawan</a>
+        </nav>
+
+
+    </header>
+
+    <!-- FAQ Section -->
+    <div class="container">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to the most common questions about our digital library services</p>
+            </div>
+            
+            <input type="text" class="search-box" placeholder="Search for questions...">
+            
+            <div class="faq-categories">
+                <div class="faq-category active">All</div>
+                <div class="faq-category">General</div>
+                <div class="faq-category">Membership</div>
+                <div class="faq-category">Borrowing</div>
+                <div class="faq-category">Digital Access</div>
+            </div>
+            
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I become a member of the library?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To become a member, you need to visit our library with a valid ID card and proof of address. Fill out the registration form available at the front desk or register online through our website. Membership is free for students and has a nominal fee for others.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many books can I borrow at once?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Regular members can borrow up to 5 books at a time for a period of 14 days. Premium members can borrow up to 8 books for 21 days. Digital resources have no limit on the number you can access simultaneously.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I access e-books and digital resources?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can access our digital resources through our online portal. Log in with your membership credentials, browse the digital catalog, and download or stream the resources you need. We offer e-books, audio books, research papers, and multimedia content.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the library operating hours?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our physical library is open from Monday to Friday, 8:00 AM to 8:00 PM, and on Saturdays from 9:00 AM to 5:00 PM. We are closed on Sundays and public holidays. The digital library is accessible 24/7.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if I return a book late?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Late returns incur a fine of Rp 5,000 per day per book. If a book is more than 30 days overdue, your borrowing privileges may be suspended until the book is returned and fines are paid. You can renew books online or by phone to avoid late fees.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I suggest books for the library to purchase?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome book suggestions from our members. You can submit your recommendations through our website's suggestion form, email us directly, or fill out a suggestion card available at the library. We review all suggestions monthly and add new titles based on demand and budget availability.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does the library offer inter-library loans?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we participate in an inter-library loan program with other libraries in the region. If we don't have a specific book you need, we can request it from another library. This process typically takes 3-7 business days, and there may be a small fee for this service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+            <div class="social">
+                <a href="https://www.facebook.com/share/1WePSNBLNr/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/smawijayaputra.ofc?igsh=MXcyajJhaHc4M2Y4eA=="><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.tiktok.com/@smawijayaputra.ofc?_t=ZS-8wdwEQwu2eu&_r=1"><i class='bx bxl-tiktok'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp-square'></i></a>
+
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="FAQ.html">FAQ</a>
+                </li>
+            </ul>
+            <p class="copyright">© 2025 Wijaya Putra | All Rights Reserved</p>
+
+        </footer>
+
+    <script>
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other open items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Search functionality
+            const searchBox = document.querySelector('.search-box');
+            
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Category filter
+            const categories = document.querySelectorAll('.faq-category');
+            
+            categories.forEach(category => {
+                category.addEventListener('click', function() {
+                    // Remove active class from all categories
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    
+                    // Add active class to clicked category
+                    this.classList.add('active');
+                    
+                    // Show all items if "All" is selected
+                    if (this.textContent === 'All') {
+                        faqItems.forEach(item => {
+                            item.style.display = 'block';
+                        });
+                        return;
+                    }
+                    
+                    // Filter by category
+                    const categoryName = this.textContent.toLowerCase();
+                    
+                    faqItems.forEach(item => {
+                        // This is a simplified example - in a real implementation, you would add category data attributes to the FAQ items
+                        // For now, we'll just search the content
+                        const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                        
+                        if (questionText.includes(categoryName) || answerText.includes(categoryName)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
